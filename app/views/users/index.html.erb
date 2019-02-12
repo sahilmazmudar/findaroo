@@ -1,0 +1,26 @@
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Budget</th>
+        <th>Lease Duration</th>
+        <th>Smoking</th>
+        <th>Drinking</th>
+        <th>Cleanliness</th>
+        <th>Quietness</th>
+    </thead>
+    <tbody>
+<% @users.each do |user| %>
+    <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.budget %></td>
+        <td><%= user.lease_duration %></td>
+        <td><%= user.smoking %></td>
+        <td><%= user.drinking %></td>
+        <td><%= user.cleanliness %></td>
+        <td><%= user.quietness %></td>
+    </tr>
+<% end %>
+    </tbody>
+</table>

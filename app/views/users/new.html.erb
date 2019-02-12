@@ -1,0 +1,33 @@
+<%= form_for(@user) do |f| %>
+
+	<%= f.label :name %>
+	<%= f.text_field :name %><br/><br/>
+	<%= f.label :email %>
+	<%= f.email_field :email %>
+	<br/>
+	<br/>
+	<%= f.label :budget %>
+	<%= f.number_field :budget %>
+	<br/>
+	<br/>
+	<%= f.label :lease_duration %>
+	<%= f.number_field :lease_duration %>
+	<br/>
+	<br/>
+	<%= f.label :smoking %>
+	<%= f.check_box :smoking %>
+	<br/>
+	<br/>
+	<%= f.label :drinking%>
+	<%= f.check_box :drinking %>
+	<br/>
+	<br/>
+	<%= f.label :cleanliness %>
+	<%= f.number_field :cleanliness %>
+	<br/>
+	<br/>
+	<%= f.label :quietness %>
+	<%= f.number_field :quietness %>
+
+  <%= f.submit %>
+<% end %>

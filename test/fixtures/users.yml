@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  budget: 9.99
+  lease_duration: 1
+  smoking: false
+  drinking: false
+  cleanliness: 1
+  quietness: 1
+
+two:
+  name: MyString
+  email: MyString
+  budget: 9.99
+  lease_duration: 1
+  smoking: false
+  drinking: false
+  cleanliness: 1
+  quietness: 1
