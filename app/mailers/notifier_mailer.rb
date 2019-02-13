@@ -3,7 +3,7 @@ class NotifierMailer < ApplicationMailer
 	return_path: 'system@example.com'
 
 	def mailgun_send(matches)
-		mg_client = Mailgun::Client.new '6c2e14be985c31aa1a12a95b10a5834c-1b65790d-d8a60bc4'
+		mg_client = Mailgun::Client.new ENV['MAILGUN-API-KEY']
 
 	    message_params = {:from    => "sahil.maz97@gmail.com",
 	                      :to      => "sahil.mazmudar@alumni.ubc.ca",
