@@ -36,8 +36,8 @@ class UsersController < ApplicationController
   def getMatches(userId, priorityList)
 		targetUser = User.find(userId)
 		matches = User.all
-		puts matches.size
-		puts priorityList.first
+		# puts matches.size
+		# puts priorityList.first
 
 		priorityList.each do |category|
 			case category
@@ -62,11 +62,11 @@ class UsersController < ApplicationController
 	def getMatchesForNumericalCategory(userId, category, tolerance, users)
 		targetUser = User.find(userId)
 		targetValue = targetUser.attributes[category]
-		puts users.first.name
+		# puts users.first.name
 		matches = []
 
 		users.each do |user|
-			puts user.name
+			# puts user.name
 			if user != targetUser
 				if withinTolerance(user, targetUser, category, tolerance)
 					matches.push(user)
@@ -92,8 +92,8 @@ class UsersController < ApplicationController
 	end
 
 	def withinTolerance(user, targetUser, category, tolerance)
-		puts user.attributes[category]
-		puts targetUser.attributes[category]
+		# puts user.attributes[category]
+		# puts targetUser.attributes[category]
 		user.attributes[category].between?(targetUser.attributes[category] - tolerance, targetUser.attributes[category] + tolerance)
 	end
 end
